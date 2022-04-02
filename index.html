@@ -44,7 +44,7 @@
 			var Fraction   = algebra.Fraction;
 			var Expression = algebra.Expression;
 			var Equation   = algebra.Equation;
-            var exp  = $("#eq").val();
+            var exp  = ($("#eq").val()).toLowerCase();
             exp = exp.split("=");
             var val1  = exp[0];
             var val2  = exp[1]||'0';
