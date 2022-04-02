@@ -54,7 +54,6 @@
             val1  = new Expression(val1);
             val2  = new Expression(val2);;
 		    if($("#eq").isValid()){
-			$("#eq").val(val1+'='+val2);
 			val1 = val1.simplify();
 			val2 = val2.simplify();
 			var expr1 = algebra.parse(val1.toString());
@@ -97,16 +96,10 @@
 <div class="container mt-3 col-sm-10 col-md-10 col-lg-8 border border-2 border-info shadow p-4 mt-5">
 	<form action="" class="was-validated">
 <div class="form-group">
-	<div class="row">
-	  <div class="col-10">
 	    <label for="eq">Equation:</label>
 	    <input type="text" id="eq" class="form-control" pattern="^([0-9\(]*x)+[\+\*\/0-9=\^x\(\)(sqrt\() -]*" autofocus >
 	    <input type="text" id="hd" >
-     </div>
-	 <div class="col-2"><br>
-	<div id="solve" class="btn btn-outline-success">Solve</div>
-</div>
-</div>
+	<div id="solve" class="btn btn-outline-success d-block mt-3">Solve</div>
 	
 	<div class="res alert alert-info mt-3"></div>
 </div></form>
