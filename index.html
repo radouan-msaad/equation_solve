@@ -37,6 +37,9 @@
 				});
 				return k;
 			}
+                        $("#eq").keyup(function(){
+                          $("#solve").click();
+                        });
 			$(".res,#hd").hide();
 			$("#solve").click(function(){
 			var html='';
