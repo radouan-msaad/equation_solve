@@ -68,15 +68,17 @@
 			  for(var i=0;i<res.length;i++){
 			  	var val = Number(res[i]);
 			  	if(!isInt(val))
-			  	var val = val.toFixed(3);
-			    html+='x'+(i+1)+' = '+val+'<br>';
+			  	var val1 = math.simplify(val);
+                                else val1=val;
+			    html+='x'+(i+1)+' = '+val1;
+                            if(!isInt(val)) html+=' = '+val.toFixed(3);html+='<br>';
 			  }
 			 }
 			  else{
 			  	var val = Number(res);
 			  	if(!isInt(val))
-			  	var val = val.toFixed(3);
-			  	 html+='x= '+val;
+			  	var val1 = math.simplify(val);
+			  	 html+='x= '+val1;html+='<br>&nbsp = '+val.toFixed(3);
 			  }
 			  $(".res").html(html);
 			}
